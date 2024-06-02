@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="code.js"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Firstname</td>
+        <td><input type="text" id="firstname"/></td>
+    </tr>
+    <tr>
+        <td>Lastname</td>
+        <td><input type="text" id="lastname"/></td>
+    </tr>
+    <tr>
+        <td>Birthdate</td>
+        <td><input type="text" id="bdate" onchange=validateBdate(this.value)></td>
+        <td><span id=bdateErr></span></td>
+    </tr>
+    <tr>
+        <td>Phone number</td>
+        <td><input type="text" id="phone" onchange=validatePhone(this.value)></td>
+        <td><span id=phoneErr></span></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><input type="text" id="email" onchange=validateEmail(this.value)></td>
+        <td><span id=emailErr></span></td>
+    </tr>
+</table>
+<button onclick=validateAndRegister()>Register</button>
+
+<script>
+    function validateBdate(bdate) {
+        if (bdate < 18) {
+            $("#bdateErr").html("Must be over 18");
+            return false;
+        } else {
+            $("#bdateErr").html("");
+            return true;
+        }
+    }
+
+    function validatePhone(phone) {
+        const regex = /^[0-9] {8}$/;
+        const ok = regex.test(phone);
+        if (ok) {
+            $("#phoneErr").html("Enter a valid phoner number");
+            return false;
+        } else {
+            $("#phoneErr").html("");
+            return true;
+        }
+    }
+
+    function validateEmail(email) {
+        const regex = /^[a-zA-Z0-9._%&+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const ok = regex.test(email);
+        if (ok) {
+            $("#emailErr").html("Enter a valid email adress");
+            return false;
+        } else {
+            $("#emailErr").html("");
+            return true;
+        }
+    }
+</script>
+</body>
+</html>
