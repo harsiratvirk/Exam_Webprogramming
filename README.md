@@ -2,13 +2,13 @@
 
 **Examination in DAPE1700 - Webprogramming**
 
-Grade: 
+**Grade**: 
 
-Form of assessment: Written examination under supervision
+**Form of assessment**: Written examination under supervision
 
-Date: 24/05/2024
+**Date**: 24/05/2024
 
-**NB: We did not have access to an IDE to solve the tasks. The code was written directly on a white sheet, which resulted in some syntax errors.**
+**NB**: We did not have access to an IDE to solve the tasks. The code was written directly on a white sheet, which resulted in some syntax errors.
 
 ## Tasks
 We will start from the idea that we are the owners of a library and we would like to create our own online store. The tasks in this exam are interconected and our purpose is to go through all the necessary steps of developing the web platform.
